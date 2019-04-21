@@ -1,0 +1,33 @@
+﻿@model XportGear.Models.Size
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Size</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" href="@Url.Action("Edit","Sizes", new { id = Model.SizeId })">
+        <i class="fa fa-edit"></i>
+        Edit
+    </a>
+    |
+    <a class="btn btn-default" href="@Url.Action("Index","Sizes")">
+        <i class="fa fa-angle-left"></i>
+        Back to List
+    </a>
+</p>

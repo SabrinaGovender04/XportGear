@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="jumbotron">
+        <h1>Xport Gear</h1>
+        <p class="lead"> Geared For Victory</p>
+        <div id="SlideshowImages">
+        <div> <img src="~/SlideShow/jordan-psg-18-19-champions-league-kits-10.jpg" height="350" width="1000"> </div>
+        <div> <img src="~/SlideShow/Nike Summer 2014 World Cup Boots (1).jpg" height="350" width="1000"> </div>
+       
+        <div> <img src="~/SlideShow/tr-40.jpg" height="350" width="1000"> </div>
+        <div> <img src="~/SlideShow/GG-ADM38737-2.jpg" height="350" width="1000"> </div>
+    </div>
+
+
+    </div>
+
+
+
+<div class="list-item">
+
+   @{
+        Html.RenderAction("ListItems", "Items");
+    }
+
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+
+</div>
+<style type="text/css" style="display: none !important;">
+    #SlideshowImages {
+        margin: 50px auto;
+        position: relative;
+        width: 1000px;
+        height: 350px;
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+        #SlideshowImages > div {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+</style>
+  <script type="text/javascript">
+
+    $(document).ready(function()
+    {
+        $("#slideshow > div:gt(0)").hide();
+        setInterval(function()
+        {
+            $('#SlideshowImages > div:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#SlideshowImages');
+        }, 3000);
+    });
+</script>  

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<XportGear.Models.Category>
+<ul id="categories">
+    @foreach (var genre in Model)
+    {
+        <li>
+            @Html.ActionLink(genre.Name,
+                "Browse", "Store",
+                new { Genre = genre.Category_Name }, null)
+        </li>
+    }
+</ul>
+

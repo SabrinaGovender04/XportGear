@@ -1,0 +1,32 @@
+﻿@model IEnumerable<XportGear.Models.RegisterViewModel>
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users </h2>
+
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            User Emails
+        </th>
+    </tr>
+
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>
+                @user.Email
+            </td>
+
+        </tr>
+    }
+</table>
+<p>
+    <a class="btn btn-default" href="@Url.Action("DashBoard","Admin")">
+        <i class="fa fa-angle-left"></i>
+        Back to List
+    </a>
+</p>
+

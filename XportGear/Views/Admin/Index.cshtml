@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    if (User.IsInRole("Admin"))
+    {
+        <a href="#">
+            <p>
+                <h2>ADMINISTRATOR</h2>
+            </p><ul>
+                <li>@Html.ActionLink("Users", "Users", "Admin")</li>
+                <li>@Html.ActionLink("User Roles", "Roles", "Admin")</li>
+                <li>@Html.ActionLink("Users with Roles", "UsersAssigned", "Admin")</li>
+                <li>@Html.ActionLink("Create User", "CreateUser", "Admin")</li>
+                <li>@Html.ActionLink("Create Role", "CreateRole", "Admin")</li>
+                <li>@Html.ActionLink("Assign Role", "AssignRole", "Admin")</li>
+
+
+
+
+
+            </ul>
+        </a>
+        }
+    }

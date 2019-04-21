@@ -1,0 +1,57 @@
+﻿@model XportGear.Models.Data_Models.Supplier
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Supplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.physicalAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.physicalAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" href="@Url.Action("Edit","Suppliers", new { id = Model.SupplierId })">
+        <i class="fa fa-edit"></i>
+        Edit
+    </a>
+    |
+    <a class="btn btn-default" href="@Url.Action("Index","Suppliers")">
+        <i class="fa fa-angle-left"></i>
+        Back to List
+    </a>
+</p>
